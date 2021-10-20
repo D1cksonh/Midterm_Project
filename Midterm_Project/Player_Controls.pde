@@ -1,7 +1,4 @@
-PImage ship;
-
 void ship () {
- ship = loadImage("ship.png");
  imageMode(CENTER);
  image(ship,175,mouseY,150,75);
 }
