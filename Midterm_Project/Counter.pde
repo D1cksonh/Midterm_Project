@@ -1,6 +1,6 @@
-int liveX = 3;
-int killed = 0;
-int difficulty = 10;
+int liveX = 3; // player lives
+int killed = 0; // # of aliens killed
+int difficulty = 10; // dificulty increase counter
 
 void lives() {
   textSize(50);
@@ -25,5 +25,11 @@ void kill () {
   if ( killed == difficulty) {
     difficulty += 10;
     moveX += 2;
+  }
+}
+
+void dead() {
+  if (liveX == 0){
+    moveX = 0;
   }
 }

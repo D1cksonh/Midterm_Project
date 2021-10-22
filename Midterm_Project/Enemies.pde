@@ -1,8 +1,8 @@
-float alienX = 800;
-float alienX2 = 1000;
-float alienY = height/2;
-float alienY2 = 400;
-float moveX = 5;
+float alienX = 800; // first alien starting position
+float alienX2 = 1000; // second alien starting position
+float alienY = height/2; // first alien stating height
+float alienY2 = 400; // second alien starting position
+float moveX = 5; // movement of the alien
 
 void enemies() {
   noFill();
@@ -28,13 +28,13 @@ void enemies() {
 }
 
 void interaction() {
-  if (mouseY > alienY-50 && mouseY < alienY + 50 && mousePressed && alienX > 100) {
+  if (mouseY > alienY-50 && mouseY < alienY + 50 && mousePressed && alienX > 100 && alienX <= width) {
    alienX = 1000;
    alienY = random(height);
    kill();
   }
   
-  if (mouseY > alienY2-50 && mouseY < alienY2 + 50 && mousePressed && alienX2 > 100) {
+  if (mouseY > alienY2-50 && mouseY < alienY2 + 50 && mousePressed && alienX2 > 100 && alienX2 <= width) {
    alienX2 = 1000;
    alienY2 = random(height);
    kill();

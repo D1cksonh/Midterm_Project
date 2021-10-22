@@ -22,7 +22,8 @@ void draw () {
  enemies();
  interaction();
  
- // Interaction with player and program
+ // Interaction with player and enemies
  lives();
  defeated();
+ dead();
 }
