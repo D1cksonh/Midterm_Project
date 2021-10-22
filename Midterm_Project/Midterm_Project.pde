@@ -14,6 +14,8 @@ void draw () {
  background(175);
  image(space,width/2,height/2,width,height);
  
+ //startup();
+ 
  // Player
  bullet();
  ship(); 
@@ -26,4 +28,10 @@ void draw () {
  lives();
  defeated();
  dead();
+ gameover();
+ reset();
+}
+
+void startup () {
+ text("Alien Shooter",275,200);
 }
