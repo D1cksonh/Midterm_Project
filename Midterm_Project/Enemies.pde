@@ -1,8 +1,8 @@
-float alienX = 800; // first alien starting position
-float alienX2 = 1000; // second alien starting position
-float alienY = height/2; // first alien stating height
-float alienY2 = 400; // second alien starting position
-float moveX = 5; // movement of the alien
+float alienX = 9999; // first alien X position
+float alienX2 = 9999; // second alien X position
+float alienY = 0; // first alien Y position
+float alienY2 = 0; // second alien Y position
+float moveX = 0; // movement of the alien
 
 void enemies() {
   noFill();

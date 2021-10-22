@@ -1,6 +1,8 @@
 PImage space;
 PImage alien;
 PImage ship;
+float titleY = 200;
+float beginX = 1;
 
 void setup() {
   space = loadImage("background.png");
@@ -14,7 +16,7 @@ void draw () {
  background(175);
  image(space,width/2,height/2,width,height);
  
- //startup();
+ startProgram();
  
  // Player
  bullet();
@@ -32,6 +34,18 @@ void draw () {
  reset();
 }
 
-void startup () {
- text("Alien Shooter",275,200);
+void startProgram () {
+  textSize(50);
+  text("Alien Shooter",250,titleY);
+  text("Press Space to Begin",160,titleY+300);
+  
+  if (keyPressed && key == ' ' && beginX == 1) {
+   beginX +=2;
+   titleY = 9999;
+   alienX = 800; // first alien X position
+   alienX2 = 1000; // second alien X position
+   alienY = random(height); // first alien Y position
+   alienY2 = random(height); // second alien Y position
+   moveX = 5; // movement of the alien
+  }
 }

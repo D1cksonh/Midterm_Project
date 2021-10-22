@@ -1,4 +1,4 @@
-int liveX = 3; // player lives // move in enemies class
+int liveX = 3; // player lives < move in enemies class
 int killed = 0; // # of aliens killed < move into enemies class
 int difficulty = 10; // dificulty increase counter
 float gameoverX = 1000;
@@ -20,7 +20,7 @@ void defeated () {
 void gameover() {
   textSize(50);
   text("Game Over!",gameoverX,200);
-  text("Press r to restart",gameoverX-56,500);
+  text("Press r to Restart",gameoverX-56,500);
 }
 
 
@@ -31,7 +31,7 @@ void left() { // move into enemies class
 void kill () { // move into enemies class
   killed = killed + 1;
   
-  if ( killed == difficulty) {
+  if (killed == difficulty) {
     difficulty += 10;
     moveX += 2;
   }
@@ -45,11 +45,12 @@ void dead() {
 }
 
 void reset() {
-  if(keyPressed && key == 'r' && liveX == 0) {
+  if (keyPressed && key == 'r' && liveX == 0) {
     gameoverX = 1000;
     liveX = 3;
     killed = 0;
     moveX = 5;
+    difficulty = 10;
     alienX = 800;
     alienX2 = 1000;
     alienY = random(height);
