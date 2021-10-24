@@ -21,21 +21,7 @@ void gameover() {
   text("Press r to Restart",gameoverX-56,500);
 }
 
-/*
-void left() { // move into enemies class
-  liveX = liveX - 1;
-} 
 
-void kill () { // move into enemies class
-  killed = killed + 1;
-  
-  if (killed == difficulty) {
-    difficulty += 10;
-    moveX += 2;
-  }
-}
-
-*/
 void dead() {
   if (liveX == 0){
     moveX = 0;
