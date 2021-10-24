@@ -1,9 +1,11 @@
-void ship () {
+//This is the main player's controls
+
+void ship () { // ship controls
  imageMode(CENTER);
  image(ship,120,mouseY,150,75);
 }
 
-void bullet() {
+void bullet() { // bullet controls
  if (mousePressed) {
   noStroke();
   fill(0,0,255);

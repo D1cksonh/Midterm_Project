@@ -1,8 +1,8 @@
-PImage space;
-PImage alien;
-PImage ship;
-float titleY = 200;
-float beginX = 1;
+PImage space; //background image
+PImage alien; // enemy spaceship image
+PImage ship; // player spaceship image
+float titleY = 200; // position of the title screen
+float beginX = 1; // begining variable
 
 void setup() {
   space = loadImage("background.png");
@@ -29,17 +29,16 @@ void draw () {
  // Interaction with player and enemies
  lives();
  defeated();
- dead();
  gameover();
  reset();
 }
 
-void startProgram () {
+void startProgram () { //starting screen code 
   textSize(50);
   text("Alien Shooter",250,titleY);
   text("Press Space to Begin",160,titleY+300);
   
-  if (keyPressed && key == ' ' && beginX == 1) {
+  if (keyPressed && key == ' ' && beginX == 1) { // program only happens once, doesnt work if put into setup
    beginX +=2;
    titleY = 9999;
    alienX = 800; // first alien X position
