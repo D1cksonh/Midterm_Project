@@ -5,9 +5,9 @@ float titleY = 200; // position of the title screen
 float beginX = 1; // begining variable
 
 void setup() {
-  space = loadImage("background.png"); // Image source https://www.reddit.com/r/PixelArt/comments/f1wg26/space_background/
-  alien = loadImage("Enemy.png");  // Image source https://www.freepik.com/premium-vector/pixel-art-alien-spaceship-item-bit-game-white-background_12383822.htm
-  ship = loadImage("ship.png"); // Image source https://www.pinterest.nz/pin/493707177880750057/
+  space = loadImage("background.png"); // Image source = https://www.reddit.com/r/PixelArt/comments/f1wg26/space_background/
+  alien = loadImage("Enemy.png");  // Image source = https://www.freepik.com/premium-vector/pixel-art-alien-spaceship-item-bit-game-white-background_12383822.htm
+  ship = loadImage("ship.png"); // Image source = https://www.pinterest.nz/pin/493707177880750057/
   frameRate(60);
   size(800,800,P2D);
 }
