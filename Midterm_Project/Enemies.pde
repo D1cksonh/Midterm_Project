@@ -3,6 +3,8 @@ float alienX2 = 9999; // second alien X position
 float alienY = 0; // first alien Y position
 float alienY2 = 0; // second alien Y position
 float moveX = 0; // movement of the alien
+int liveX = 3; // player lives < move in enemies class
+int killed = 0; // # of aliens killed < move into enemies class
 
 void enemies() {
   noFill();
@@ -38,5 +40,18 @@ void interaction() {
    alienX2 = 1000;
    alienY2 = random(height);
    kill();
+  }
+}
+
+void left() { // move into enemies class
+  liveX = liveX - 1;
+} 
+
+void kill () { // move into enemies class
+  killed = killed + 1;
+  
+  if (killed == difficulty) {
+    difficulty += 10;
+    moveX += 2;
   }
 }
